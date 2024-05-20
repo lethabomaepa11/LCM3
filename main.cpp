@@ -16,13 +16,13 @@ int LCM(int num1, int num2, int num3)
     {
         if(n1 != n2 || n2 != n3 || n3 != n1)
         {
-            if((n1 < n2 && n1 < n3) || (n1 == n2 || n1 == n3))
+            if((n1 <= n2 && n1 <= n3))
             {
                 count1++;
                 n1 = num1 * count1;
                 cout<<"n1 : "<<n1<<endl;
             }
-            else if((n2 < n3 && n2 < n1) || (n2 == n1 || n2 == n3))
+            else if((n2 <= n3 && n2 <= n1))
             {
                 count2++;
                 n2 = num2 * count2;
@@ -49,7 +49,7 @@ int LCM(int num1, int num2, int num3)
 
 int main()
 {
-    int lcm = LCM(198,47,23);
+    int lcm = LCM(4,5,6);
     cout << lcm << endl;
     return 0;
 }
